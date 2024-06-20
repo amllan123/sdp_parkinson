@@ -57,7 +57,7 @@ const SpiralWaveForm = () => {
         if (active == 1) {
           const formData = new FormData();
           formData.append("file", selectedSpiral);
-          response = await axios.post(`http://${baseurl}:8000/predict_vgg16`, formData, {
+          response = await axios.post(`https://sdp-api-d469.onrender.com/predict_vgg16`, formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
@@ -66,7 +66,7 @@ const SpiralWaveForm = () => {
         } else if (active == 2) {
           const formData = new FormData();
           formData.append("file", selectedWave);
-          response = await axios.post(`http://${baseurl}:8000/predict_wave`, formData, {
+          response = await axios.post(`https://sdp-api-d469.onrender.com/predict_wave`, formData, {
             headers: {
               "Content-Type": "multipart/form-data",
             },
