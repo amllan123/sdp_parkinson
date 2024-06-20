@@ -95,7 +95,7 @@ const MultimodelForm = () => {
       data.append("timestamp", formData.timestamp);
 
       try {
-        const response = await axios.post(`http://${baseurl}:8000/predict_combined`, data, {
+        const response = await axios.post(`https://sdp-api-d469.onrender.com/predict_combined`, data, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
