@@ -65,7 +65,7 @@ const SensorDataForm = () => {
           timestamp: parseFloat(timestamp),
         };
   
-        const response = await axios.post(`http://${baseurl}:8000/predict_bltsm`, data);
+        const response = await axios.post(`https://sdp-api-d469.onrender.com/predict_bltsm`, data);
         const result = response.data;
         setPredictionResult(result.result);
         setAccuracy(result.prediction);
